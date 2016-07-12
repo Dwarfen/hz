@@ -1,33 +1,44 @@
 {
-  "name": "html",
+  "name": "118410-sedona",
+  "version": "0.1.0",
   "private": true,
-  "devDependencies": {
-    "autoprefixer": "6.3.3",
-    "eslint": "^1.10.3",
+  "description": "Обучающий проект «sedona» от HTML Academy",
+  "author": "Вадим Краснухин",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/up-htmlacademy/118410-sedona.git"
+  },
+  "bugs": {
+    "url": "https://github.com/up-htmlacademy/118410-sedona/issues"
+  },
+  "homepage": "https://github.com/up-htmlacademy/118410-sedona",
+  "dependencies": {
+    "autoprefixer": "6.1.x",
     "grunt": "0.4.x",
-    "grunt-combine-media-queries": "^1.0.20",
-    "grunt-contrib-clean": "1.0.0",
-    "grunt-contrib-concat": "^1.0.0",
-    "grunt-contrib-copy": "1.0.0",
-    "grunt-contrib-cssmin": "^1.0.0",
-    "grunt-contrib-imagemin": "^1.0.1",
-    "grunt-contrib-less": "1.2.0",
-    "grunt-contrib-pug": "^1.0.0",
-    "grunt-contrib-stylus": "^1.2.0",
-    "grunt-contrib-uglify": "1.0.0",
-    "grunt-contrib-watch": "0.6.1",
+    "grunt-combine-media-queries": "^1.0.19",
+    "grunt-contrib-clean": "0.6.x",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "0.8.x",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-less": "1.1.x",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-contrib-watch": "0.6.x",
     "grunt-csscomb": "^3.1.0",
-    "grunt-include-replace": "^3.2.0",
-    "grunt-lintspaces": "0.7.4",
-    "grunt-postcss": "0.8.0",
-    "grunt-spritesmith": "^6.3.1",
-    "grunt-svgmin": "^3.2.0",
-    "grunt-svgstore": "^1.0.0",
-    "http-server": "^0.8.5",
-    "load-grunt-tasks": "3.4.1"
+    "grunt-lintspaces": "0.7.x",
+    "grunt-postcss": "0.7.x",
+    "load-grunt-tasks": "3.3.x"
   },
   "scripts": {
-    "test": "eslint js/",
-    "start": "http-server ."
+    "pregosha": "npm install > /dev/null",
+    "gosha": "grunt gosha",
+    "test": "grunt lintspaces:codestyle",
+    "start": "grunt watch"
+  },
+  "engines": {
+    "node": "^5.0.0"
+  },
+  "devDependencies": {
+    "grunt-include-replace": "^4.0.1"
   }
 }

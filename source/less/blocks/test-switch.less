@@ -1,0 +1,53 @@
+.switch {
+    width: 550px;
+    background: #fff;
+    //position: absolute;
+    //top: 100px;
+    //left: 50%;
+    //margin-left: -175px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+
+    & .tabs_menu {
+        display: table-row;
+
+        & li {
+            display: inline-block;
+
+            & .active {
+              background: #5f84c1;
+              color: #fff;
+            }
+
+            & a {
+              display: table-cell;
+              width: 100px;
+              text-align: center;
+              text-decoration: none;
+              background: #f8f8f8;
+              color: #292929;
+              border-bottom: 1px solid #ccc;
+              border-left: 1px solid #ccc;
+              padding: 10px 0;
+            }
+
+            & a:first-child {
+              border-left: 0;
+            }
+
+          }
+        }
+
+    // & #tab2, #tab3 {
+    //   display: none;
+    // }
+
+    & .tab {
+      padding: 0 10px;
+      display: none;
+    }
+
+    .opened {
+      display: block;
+      z-index: 10;
+    }
+}

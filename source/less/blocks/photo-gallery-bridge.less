@@ -1,0 +1,196 @@
+.photo-gallery-bridge{
+  width:100%;
+  border-bottom:1px solid #e5e5e5;
+  padding:22px 0 20px;
+
+  & .bridge-img{
+    width:100%;
+    height:282px;
+    min-height:282px;
+    background:url("../img/bridge-bg.jpg") no-repeat 48% 90%;
+    background-size:cover;
+  }
+
+  & .bridge-text{
+    width:100%;
+    padding-top:10px;
+
+    & h2{
+      font-family:PT Sans, sans-serif;
+      font-size:14px;
+      line-height:14px;
+    }
+
+    & p{
+      font-family:PT Sans, sans-serif;
+      font-size:14px;
+      line-height:14px;
+      color:#333;
+      text-transform:none;
+    }
+
+    & .like{
+      width:100%;
+
+      &-img{
+        display:inline-block;
+        width:23px;
+        height:21px;
+        background:url("../img/like-icon.png") no-repeat;
+        vertical-align:top;
+        cursor:pointer;
+      }
+
+      &-text{
+        display:inline-block;
+        font-family:PT Sans, sans-serif;
+        font-size:14px;
+        line-height:14px;
+        color:#333;
+        font-weight:bold;
+        margin:0;
+        vertical-align:bottom;
+        padding-left:12px;
+      }
+    }
+  }
+}
+
+@media (min-width: @mobile){
+  .photo-gallery-bridge{
+    width:50%;
+    border-bottom: none;
+    padding:0;
+    overflow: hidden;
+    font-size: 0;
+    display: inline-block;
+
+    & .bridge-img{
+      width:100%;
+      height:269px;
+      min-height:269px;
+      background:url("../img/bridge-bg.jpg") no-repeat 48% 90%;
+      background-size:cover;
+    }
+
+    & .bridge-text{
+      width:100%;
+      padding-top:10px;
+      padding: 10px 22px;
+      background-color: #f2f2f2;
+      position: relative;
+
+      & h2{
+        font-family:PT Sans, sans-serif;
+        font-size:14px;
+        line-height:14px;
+      }
+
+      & p{
+        font-family:PT Sans, sans-serif;
+        font-size:14px;
+        line-height:14px;
+        color:#333;
+        text-transform:none;
+      }
+
+      & .like{
+        width:120px;
+        position: absolute;
+        right: 0;
+        top: 30px;
+
+        &-img{
+          display:inline-block;
+          width:23px;
+          height:21px;
+          background:url("../img/like-icon.png") no-repeat;
+          vertical-align:top;
+          cursor:pointer;
+        }
+
+        &-text{
+          display:inline-block;
+          font-family:PT Sans, sans-serif;
+          font-size:14px;
+          line-height:14px;
+          color:#333;
+          font-weight:bold;
+          margin:0;
+          vertical-align:bottom;
+          padding-left:12px;
+        }
+      }
+    }
+  }
+}
+
+@media(min-width: @tablet){
+  .photo-gallery-bridge{
+    width:33.33%;
+    border-bottom: none;
+    padding:0;
+    overflow: hidden;
+    position: relative;
+
+    & .bridge-img{
+      width:100%;
+      height:269px;
+      min-height:269px;
+      background:url("../img/bridge-bg.jpg") no-repeat 48% 90%;
+      background-size:cover;
+    }
+
+    & .bridge-text{
+      width:100%;
+      padding-top:10px;
+      padding: 10px 22px;
+      background-color: #f2f2f2;
+      background-color: rgba(0, 0, 0, 0.3);
+      bottom: 0;
+      position: absolute;
+
+      & h2{
+        font-family:PT Sans, sans-serif;
+        font-size:14px;
+        line-height:14px;
+        color: #fff;
+      }
+
+      & p{
+        font-family:PT Sans, sans-serif;
+        font-size:14px;
+        line-height:14px;
+        color:#333;
+        text-transform:none;
+        color: #fff;
+      }
+
+      & .like{
+        
+
+        &-img{
+          display:inline-block;
+          width:23px;
+          height:21px;
+          background:url("../img/like-icon.png") no-repeat;
+          vertical-align:top;
+          cursor:pointer;
+        }
+
+        &-text{
+          display:inline-block;
+          font-family:PT Sans, sans-serif;
+          font-size:14px;
+          line-height:14px;
+          color:#333;
+          font-weight:bold;
+          margin:0;
+          vertical-align:bottom;
+          padding-left:12px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

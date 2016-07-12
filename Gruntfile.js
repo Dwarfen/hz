@@ -12,15 +12,6 @@ module.exports = function(grunt){
       }
     },
 
-    //компилятор стайлус
-    stylus: {
-      style: {
-        files: {
-          "build/css/style.css": "source/stylus/style.styl"
-        }
-      }
-    },
-
     // автопрефиксер
     postcss: {
       options: {
@@ -43,68 +34,6 @@ module.exports = function(grunt){
           livereload: true
         }
       }
-    },
-
-    //jade compiler
-     pug: {
-        compile: {
-            options: {
-                client: false,
-                pretty: true,
-                data: {
-                    debug: false
-                }
-            },
-            files: [
-            {
-                'build/index.html': ['source/index.jade']
-            },
-            {
-                src: "*.jade",
-                dest: "build/",
-                cwd: 'source/templates/',
-                expand: true,
-                ext: ".html"
-            } ]
-        }
-    },
-
-
-    //svg-sprite
-    svgstore: {
-      options: {
-        includeTitleElement: false,
-        svg: {
-          style: 'display:none',
-        },
-        cleanup: [
-          'fill',
-        ],
-      },
-      default : {
-        files: {
-          'build/img/sprite.svg': ['build/img/sprites-svg/*.svg'],
-        },
-      },
-    },
-
-    //svg minifier
-    svgmin: {
-        options: {
-            plugins: [
-                {
-                    removeViewBox: false
-                }, {
-                    removeUselessStrokeAndFill: false
-                },
-            ]
-        },
-        dist: {
-            files: [{
-              expand: true,
-              src: ["build/img/**/*.svg"]
-            }]
-        }
     },
 
     // combine-media-quaries
@@ -146,15 +75,6 @@ module.exports = function(grunt){
       }
     },
 
-    //sprites
-    sprite:{
-      all: {
-        src: 'source/img/sprites/*.{png, jpg}',
-        dest: 'source/img/sprites/sprites.png',
-        destCss: 'source/img/sprites/sprites.css',
-        padding: 10
-      },
-    },
     // grunt-copy
     copy: {
       build: {
@@ -201,25 +121,17 @@ module.exports = function(grunt){
     }
   }
   });
-
 grunt.registerTask("build", [
     "clean",
     "copy",
-    "pug",
-    "stylus",
+    "includereplace",
+    "csscomb",
+    "less",
     "cmq",
     "postcss",
     "cssmin",
     "imagemin",
-    "svgmin",
-    "svgstore",
     "concat",
     "uglify"
   ]);
-
-grunt.registerTask("image", [
-    "clean",
-    "copy"
-  ]);
 };
-

@@ -1,0 +1,131 @@
+.features{
+  padding:25px 0 3px;
+  width:100%;
+  min-width:320px;
+
+  &-list{
+    list-style:none;
+    padding-left:0;
+
+    &__item{
+      padding-left:50px;
+      padding-bottom:4px;
+      position:relative;
+
+      &:before{
+        content:"";
+        display:block;
+        //background-color: #ccc;
+        position:absolute;
+        top:-16px;
+        left:-1px;
+      }
+
+      &--item1:before{
+        width:39px;
+        height:37px;
+        background:url("../img/icon-house.png") no-repeat;
+      }
+
+      &--item2:before{
+        width:32px;
+        height:38px;
+        background:url("../img/icon-gift.png") no-repeat;
+      }
+
+      &--item3:before{
+        width:40px;
+        height:35px;
+        background:url("../img/icon-burger.png") no-repeat;
+      }
+
+      & h2{
+        font-size:18px;
+        line-height:20px;
+        text-transform:uppercase;
+        font-family:PT Sans, sans-serif;
+      }
+
+      & p{
+        width:210px;
+        min-width:215px;
+        font-size:14px;
+        line-height:20px;
+        text-transform:uppercase;
+        font-family:PT Sans, sans-serif;
+      }
+    }
+  }
+}
+
+@media (min-width: @mobile){
+  .features{
+    padding:60px 0 60px;
+    text-align:center;
+    display:block;
+    font-size:0;
+
+    &-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+
+      &__item{
+        padding:0;
+        margin:0;
+        position:relative;
+        display:inline-block;
+        width:33%;
+        font-size:0;
+        text-align:center;
+        vertical-align:top;
+
+        &:before{
+          content:"";
+          display:block;
+          position:relative;
+          // top:60px;
+          // left:-1px;
+          margin:0 auto;
+        }
+
+        &--item1:before{
+          width:39px;
+          height:37px;
+          background:url("../img/icon-house.png") no-repeat;
+        }
+
+        &--item2:before{
+          width:32px;
+          height:38px;
+          background:url("../img/icon-gift.png") no-repeat;
+        }
+
+        &--item3:before{
+          width:40px;
+          height:35px;
+          background:url("../img/icon-burger.png") no-repeat;
+        }
+
+        & h2{
+          font-size:21px;
+          line-height:22px;
+          text-transform:uppercase;
+          font-family:PT Sans, sans-serif;
+          text-align:center;
+        }
+
+        & p{
+          width:165px;
+          min-width:165px;
+          font-size:14px;
+          line-height:20px;
+          text-transform:uppercase;
+          font-family:PT Sans, sans-serif;
+          text-align:center;
+          margin:0 auto;
+        }
+      }
+    }
+  }
+}

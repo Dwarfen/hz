@@ -1,0 +1,39 @@
+.photo-text{
+  width:100%;
+  text-align:center;
+  padding:28px 0 25px;
+  border-bottom:1px solid #e5e5e5;
+
+  & h2{
+    font-family:PT Sans, sans-serif;
+    font-size:18px;
+    line-height:18px;
+    padding-bottom:15px;
+  }
+
+  & p{
+    font-family:PT Sans, sans-serif;
+    font-size:14px;
+    line-height:24px;
+    color:#333;
+    width:280px;
+    margin:0 auto;
+  }
+}
+
+@media (min-width: @mobile){
+  .photo-text{
+    padding:48px 0 66px;
+    border-bottom:none;
+
+    & h2{
+      font-size:30px;
+      line-height:30px;
+      padding-bottom:5px;
+    }
+
+    & p{
+      width:435px;
+    }
+  }
+}

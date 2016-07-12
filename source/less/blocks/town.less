@@ -1,0 +1,167 @@
+.town{
+  text-align:center;
+  padding-top:50px;
+  position:relative;
+  color:#fff;
+  background-color:#81b3d2;
+
+  &-description{
+    padding-bottom:25px;
+
+    & h2{
+      font-size:18px;
+      line-height:22px;
+      padding-bottom:12px;
+      text-transform:uppercase;
+      font-family:PT Sans, sans-serif;
+      margin:0 auto;
+    }
+
+    & p{
+      width:265px;
+      margin:0 auto;
+      font-size:14px;
+      line-height:22px;
+      text-transform:uppercase;
+      font-family:PT Sans, sans-serif;
+      padding-bottom:10px;
+
+      & span{
+        line-height:normal;
+        padding:0;
+        margin:0;
+      }
+    }
+  }
+
+  &-image{
+    width:100%;
+    height:auto;
+    min-height:178px;
+
+    & img{
+      display:block;
+      width:100%;
+      height:auto;
+      min-height:178px;
+    }
+  }
+}
+
+@media (min-width: @mobile){
+  .town{
+    text-align:center;
+    padding:0;
+    position:relative;
+    color:#fff;
+    background-color:#fff;
+    overflow:hidden;
+
+    &:after{
+      content:"";
+      display:block;
+      clear:both;
+    }
+
+    &-description{
+      padding-top:50px;
+      padding-bottom:23px;
+      float:left;
+      text-align:center;
+      width:33%;
+      background-color:#81b3d2;
+
+      & h2{
+        width:150px;
+        font-size:21px;
+        line-height:22px;
+        padding-bottom:12px;
+        text-transform:uppercase;
+        font-family:PT Sans, sans-serif;
+        margin:0 auto;
+      }
+
+      & p{
+        width:180px;
+        margin:0 auto;
+        font-size:14px;
+        line-height:22px;
+        text-transform:uppercase;
+        font-family:PT Sans, sans-serif;
+        padding-bottom:20px;
+
+        & span{
+          line-height:normal;
+          padding:0;
+          margin:0;
+        }
+      }
+    }
+
+    &-image{
+      & img{
+        display:inline-block;
+        width:67%;
+        height:auto;
+        min-height:257px;
+      }
+    }
+  }
+}
+
+@media(min-width: @tablet){
+  .town{
+    text-align:center;
+    padding:0;
+    position:relative;
+    color:#fff;
+    background-color:#fff;
+    overflow:hidden;
+
+    &-description{
+      padding-top:55px;
+      padding-bottom:40px;
+      float:left;
+      text-align:center;
+      width:33%;
+      background-color:#81b3d2;
+      overflow:hidden;
+
+      & h2{
+        width:150px;
+        font-size:21px;
+        line-height:22px;
+        padding-bottom:12px;
+        text-transform:uppercase;
+        font-family:PT Sans, sans-serif;
+        margin:0 auto;
+      }
+
+      & p{
+        width:265px;
+        margin:0 auto;
+        font-size:14px;
+        line-height:22px;
+        text-transform:uppercase;
+        font-family:PT Sans, sans-serif;
+        padding-bottom:20px;
+
+        & span{
+          line-height:normal;
+          padding:0;
+          margin:0;
+          width:50px;
+        }
+      }
+    }
+
+    &-image{
+      & img{
+        display:inline-block;
+        width:67%;
+        height:auto;
+        min-height:257px;
+      }
+    }
+  }
+}
