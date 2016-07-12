@@ -1,1 +1,1 @@
-# hz
+"DEFAULT STRUCTURE" 
